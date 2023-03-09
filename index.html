@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+
+  </head>
+
+  <body class="bg-slate-900">
+    <div>
+        <header>
+
+            <nav class="fixed top-0 z-50 w-full bg-slate-900 border-b border-gray-700">
+                <div class="px-3 py-3 lg:px-5 lg:pl-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center justify-start">
+                    <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 text-sm  rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600">
+                        <span class="sr-only">Open sidebar</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                        </svg>
+                    </button>
+                        <span class="self-center pl-4 text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">DMZ</span>
+                    </a>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex items-center ml-3">
+                        <div>
+                            <button type="button" class="flex text-sm bg-slate-900 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                            <span class="sr-only">Open user menu</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#E5E7EB" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <circle cx="12" cy="12" r="9" />
+                                <circle cx="12" cy="10" r="3" />
+                                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+                            </svg>
+                            </button>
+                        </div>
+                        <div class="z-50 hidden my-4 text-base list-none divide-y  rounded shadow bg-gray-700 divide-gray-600" id="dropdown-user">
+                            <div class="px-4 py-3" role="none">
+                            <p class="text-sm text-white" role="none">
+                                Name
+                            </p>
+                            <p class="text-sm font-medium truncate text-gray-300" role="none">
+                                User@email.com
+                            </p>
+                            </div>
+                            <ul class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" role="menuitem">Saves</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" role="menuitem">Setting</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white" role="menuitem">Sign out</a>
+                            </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </header>
+            <div class="hidden md:flex">
+			<div id="sidebar" class="fixed h-full top-12 left-0 w-64 bg-slate-900 shadow-md border-r-2 border-r-gray-700 rounded px-8 pt-6 pb-8 mb-4">
+
+                <div>
+                    <label for="distance_select" class="sr-only">Distance</label>
+                    <select id="distance_select" class="block py-2.5 px-0 w-full text-sm  bg-transparent border-0  appearance-none text-gray-400 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                        <option selected>Distance</option>
+                        <option value="1">1 miles</option>
+                        <option value="2">2 miles</option>
+                        <option value="5">5 miles</option>
+                        <option value="10">10 miles</option>
+                        <option value="20">20 miles</option>
+                        <option value="40">40 miles</option>
+                        <option value="60">60 miles</option>
+                        <option value="80">80 miles</option>
+                        <option value="100">100 miles</option>
+                        <option value="250">250 miles</option>
+                        <option value="500">500 miles</option>
+
+                    </select>
+                </div>
+
+                
+                <label for="make_select" class="sr-only">Make</label>
+                <select id="make_select" class="block py-2.5 px-0 w-full text-sm  bg-transparent border-0  appearance-none text-gray-400 dark:border-gray-400 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                    <option selected>Make</option>
+                    <option value="Acura">Acura</option>
+                    <option value="Alfa">Alfa Romeo</option>
+                    <option value="Aston">Aston Martin</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Bentley">Bentley</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Bugatti">Bugatti</option>
+                    <option value="Buick">Buick</option>
+                    <option value="Cadillac">Cadillac</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Chrysler">Chrysler</option>
+                    <option value="Daewoo">Daewoo</option>
+                    <option value="Daihatsu">Daihatsu</option>
+                    <option value="Dodge">Dodge</option>
+                    <option value="Eagle">Eagle</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Fiat">Fiat</option>
+                    <option value="Fisker">Fisker</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Genesis">Genesis</option>
+                    <option value="GMC">GMC</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hummer">Hummer</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Infiniti">Infiniti</option>
+                    <option value="Isuzu">Isuzu</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Lamborghini">Lamborghini</option>
+                    <option value="Land">Land Rover</option>
+                    <option value="Lexus">Lexus</option>
+                    <option value="Lincoln">Lincoln</option>
+                    <option value="Lotus">Lotus</option>
+                    <option value="Maserati">Maserati</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="McLaren">McLaren</option>
+                    <option value="Mercedes">Mercedes-Benz</option>
+                    <option value="Mercury">Mercury</option>
+                    <option value="Mini">Mini</option>
+                    <option value="Mitsubishi">Mitsubishi</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Oldsmobile">Oldsmobile</option>
+                    <option value="Plymouth">Plymouth</option>
+                    <option value="Pontiac">Pontiac</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Ram">Ram</option>
+                    <option value="Rolls">Rolls-Royce</option>
+                    <option value="Saab">Saab</option>
+                    <option value="Saturn">Saturn</option>
+                    <option value="Scion">Scion</option>
+                    <option value="Smart">Smart</option>
+                    <option value="Subaru">Subaru</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Volvo">Volvo</option>
+                </select>
+
+                <div class="flex">
+                    <label for="min_year" class="sr-only">Year</label>
+                    <select id="min_year" class="flex-1 py-2.5 px-0 w-1/4 text-sm  bg-transparent border-0  border-gray-200 appearance-none text-gray-400 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                        <option selected>1981</option>
+                        <option id="min_2023" value="2023">2023</option>
+                        <option id="min_2022" value="2022">2022</option>
+                        <option id="min_2021" value="2021">2021</option>
+                        <option id="min_2020" value="2020">2020</option>
+                        <option id="min_2019" value="2019">2019</option>
+                        <option id="min_2018" value="2018">2018</option>
+                        <option id="min_2017" value="2017">2017</option>
+                        <option id="min_2016" value="2016">2016</option>
+                        <option id="min_2015" value="2015">2015</option>
+                        <option id="min_2014" value="2014">2014</option>
+                        <option id="min_2013" value="2013">2013</option>
+                        <option id="min_2012" value="2012">2012</option>
+                        <option id="min_2011" value="2011">2011</option>
+                        <option id="min_2010" value="2010">2010</option>
+                        <option id="min_2009" value="2009">2009</option>
+                        <option id="min_2008" value="2008">2008</option>
+                        <option id="min_2007" value="2007">2007</option>
+                        <option id="min_2006" value="2006">2006</option>
+                        <option id="min_2005" value="2005">2005</option>
+                        <option id="min_2004" value="2004">2004</option>
+                        <option id="min_2003" value="2003">2003</option>
+                        <option id="min_2002" value="2002">2002</option>
+                        <option id="min_2001" value="2001">2001</option>
+                        <option id="min_2000" value="2000">2000</option>
+                        <option id="min_1999" value="1999">1999</option>
+                        <option id="min_1998" value="1998">1998</option>
+                        <option id="min_1997" value="1997">1997</option>
+                        <option id="min_1996" value="1996">1996</option>
+                        <option id="min_1995" value="1995">1995</option>
+                        <option id="min_1994" value="1994">1994</option>
+                        <option id="min_1993" value="1993">1993</option>
+                        <option id="min_1992" value="1992">1992</option>
+                        <option id="min_1991" value="1991">1991</option>
+                        <option id="min_1990" value="1990">1990</option>
+                        <option id="min_1989" value="1989">1989</option>
+                        <option id="min_1988" value="1988">1988</option>
+                        <option id="min_1987" value="1987">1987</option>
+                        <option id="min_1986" value="1986">1986</option>
+                        <option id="min_1985" value="1985">1985</option>
+                        <option id="min_1984" value="1984">1984</option>
+                        <option id="min_1983" value="1983">1983</option>
+                        <option id="min_1982" value="1982">1982</option>
+                        <option id="min_1981" value="1981">1981</option>
+                    </select>
+
+                    <div class="flex-1 text-gray-400 py-2.5 text-center">to</div>
+                    <label for="max_year" class="sr-only">Year</label>
+                    <select id="max_year" class="flex-1 py-2.5 px-3 w-1/4 text-sm bg-transparent border-0  border-gray-200 appearance-none text-gray-400 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                        <option selected>2023</option>
+                        <option id="max_2023" value="2023">2023</option>
+                        <option id="max_2022" value="2022">2022</option>
+                        <option id="max_2021" value="2021">2021</option>
+                        <option id="max_2020" value="2020">2020</option>
+                        <option id="max_2019" value="2019">2019</option>
+                        <option id="max_2018" value="2018">2018</option>
+                        <option id="max_2017" value="2017">2017</option>
+                        <option id="max_2016" value="2016">2016</option>
+                        <option id="max_2015" value="2015">2015</option>
+                        <option id="max_2014" value="2014">2014</option>
+                        <option id="max_2013" value="2013">2013</option>
+                        <option id="max_2012" value="2012">2012</option>
+                        <option id="max_2011" value="2011">2011</option>
+                        <option id="max_2010" value="2010">2010</option>
+                        <option id="max_2009" value="2009">2009</option>
+                        <option id="max_2008" value="2008">2008</option>
+                        <option id="max_2007" value="2007">2007</option>
+                        <option id="max_2006" value="2006">2006</option>
+                        <option id="max_2005" value="2005">2005</option>
+                        <option id="max_2004" value="2004">2004</option>
+                        <option id="max_2003" value="2003">2003</option>
+                        <option id="max_2002" value="2002">2002</option>
+                        <option id="max_2001" value="2001">2001</option>
+                        <option id="max_2000" value="2000">2000</option>
+                        <option id="max_1999" value="1999">1999</option>
+                        <option id="max_1998" value="1998">1998</option>
+                        <option id="max_1997" value="1997">1997</option>
+                        <option id="max_1996" value="1996">1996</option>
+                        <option id="max_1995" value="1995">1995</option>
+                        <option id="max_1994" value="1994">1994</option>
+                        <option id="max_1993" value="1993">1993</option>
+                        <option id="max_1992" value="1992">1992</option>
+                        <option id="max_1991" value="1991">1991</option>
+                        <option id="max_1990" value="1990">1990</option>
+                        <option id="max_1989" value="1989">1989</option>
+                        <option id="max_1988" value="1988">1988</option>
+                        <option id="max_1987" value="1987">1987</option>
+                        <option id="max_1986" value="1986">1986</option>
+                        <option id="max_1985" value="1985">1985</option>
+                        <option id="max_1984" value="1984">1984</option>
+                        <option id="max_1983" value="1983">1983</option>
+                        <option id="max_1982" value="1982">1982</option>
+                        <option id="max_1981" value="1981">1981</option>
+                    </select>
+                </div>
+
+                
+                <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-transparent dark:bg-gray-900 text-gray-400 dark:text-white" data-inactive-classes="text-gray-400">
+                    <h2 id="accordion-flush-heading-1">
+                      <button type="button" class="flex items-center justify-between w-full py-2.5 text-sm text-left text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+                        <span>Price</span>
+                        <div class="pr-[9px]">
+                            <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" fill="#6b7380" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        </button>
+                    </h2>
+                    <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                      <div class="py-5 font-light">
+                        <div>
+                            <label for="min-price" class="block text-sm font-medium leading-6 text-gray-900"></label>
+                            <div class="relative mt-2 rounded-md shadow-sm">
+                              <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                                <span class="text-gray-500 sm:text-sm">$</span>
+                              </div>
+                              <input type="text" name="min-price" id="min-price" class="block bg-gray-400 w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Min Price">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="max-price" class="block text-sm font-medium leading-6 text-gray-900"></label>
+                            <div class="relative mt-2 rounded-md shadow-sm">
+                              <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                                <span class="text-gray-500 sm:text-sm">$</span>
+                              </div>
+                              <input type="text" name="max-price" id="max-price" class="block bg-gray-400 w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Max Price">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <h2 id="accordion-flush-heading-2">
+                        <button type="button" class="flex items-center justify-between w-full py-2.5 text-sm text-left text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="true" aria-controls="accordion-flush-body-2">
+                            <span>Mileage</span>
+                            <div class="pr-[9px]">
+                                <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" fill="#6b7380" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </div>
+                        </button>
+                      </h2>
+                      <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                        <div class="py-5 font-light">
+                          <div>
+                              <label for="min-mileage" class="block text-sm font-medium leading-6 text-gray-900"></label>
+                              <div class="relative mt-2 rounded-md shadow-sm">
+                                <input type="text" name="min-mileage" id="min-mileage" class="block bg-gray-400 w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Min Mileage">
+                              </div>
+                          </div>
+                          <div>
+                              <label for="max-mileage" class="block text-sm font-medium leading-6 text-gray-900"></label>
+                              <div class="relative mt-2 rounded-md shadow-sm">
+                                <input type="text" name="max-mileage" id="max-mileage" class="block bg-gray-400 w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-600 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Max Mileage">
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+
+
+                    <button id="dropdownRadioButton" data-dropdown-toggle="dropdownDefaultRadio" class="text-gray-400 w-full text-left bg-transparent font-s rounded-none text-sm px-0 py-2.5 inline-flex items-center" type="button">Title <div class="pl-[135px]"><svg data-accordion-icon class="w-5 h-5" fill="#6b7380" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></div></button>
+                    <div id="dropdownDefaultRadio" class="z-10 hidden w-36 bg-transparent divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+                        <ul class="p-3 space-y-3 text-sm text-gray-700" aria-labelledby="dropdownRadioButton">
+                          <li>
+                            <div class="flex items-center">
+                                <input checked id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 focus:ring-gray-500  focus:ring-2 ">
+                                <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-200 dark:text-gray-300">Any</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center">
+                                <input id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 focus:ring-gray-500 focus:ring-2">
+                                <label for="default-radio-2" class="ml-2 text-sm font-medium text-gray-200 dark:text-gray-300">Clean</label>
+                            </div>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+            </div>  <!--savesearch -->
+            </div>
+
+            <div class="p-4 sm:ml-64">
+                <div class="p-4 mt-14">
+                    <div class="grid grid-cols-3 gap-4 mb-4">
+                        <div class="flex items-center justify-center min-w">
+                            <div class="w-full max-w-sm border  rounded-lg shadow bg-slate-800 border-gray-700">
+                                <a href="#">
+                                    <img class="p-8 rounded-t-lg" src="https://scontent.fhio2-1.fna.fbcdn.net/v/t45.5328-4/334827202_6215933971790967_3004214485023226586_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=c48759&_nc_ohc=Bwu0_rtcD18AX84LejJ&_nc_ht=scontent.fhio2-1.fna&oh=00_AfBXIoIl4MeFRU2jYThqfcV0ZoxTfVIJspYnWk6qOAn5_w&oe=640D8261" alt="product image" />
+                                </a>
+                                <div class="px-5 pb-5">
+                                    <a href="#">
+                                        <h5 class="text-xl font-semibold tracking-tight text-gray-200">2020 Honda civic Si Sedan 4D</h5>
+                                    </a>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-3xl font-bold text-gray-300">$19,700</span>
+                                            <span class="text-sm font-bold text-gray-400">8.3K miles</span>
+                                        </div>
+                                        <span class="text-lg font-bold text-gray-400">Title: clean</span>
+                                    </div>
+
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-full max-w-sm border  rounded-lg shadow bg-slate-800 border-gray-700">
+                                <a href="#">
+                                    <img class="p-8 rounded-t-lg" src="https://scontent.fhio2-2.fna.fbcdn.net/v/t39.30808-6/332066229_5583879275057477_298885411586800418_n.jpg?stp=c0.290.720.720a_dst-jpg_s261x260&_nc_cat=110&ccb=1-7&_nc_sid=3b2858&_nc_ohc=R97MSKA6F_QAX8cbPkA&_nc_ht=scontent.fhio2-2.fna&oh=00_AfDhReeiA4N4ynkFbYQo6F5_ylHP2fX2p_DoRmq1B4df0g&oe=640DF774" alt="product image" />
+                                </a>
+                                <div class="px-5 pb-5">
+                                    <a href="#">
+                                        <h5 class="text-xl font-semibold tracking-tight text-gray-200">2020 Toyota corolla</h5>
+                                    </a>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-3xl font-bold text-gray-300">$15,500</span>
+                                            <span class="text-sm font-bold text-gray-400">66K miles</span>
+                                        </div>
+                                        <span class="text-lg font-bold text-gray-400">Title: </span>
+                                    </div>
+
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-full max-w-sm border  rounded-lg shadow bg-slate-800 border-gray-700">
+                                <a href="#">
+                                    <img class="p-8 rounded-t-lg" src="https://scontent.fhio2-1.fna.fbcdn.net/v/t39.30808-6/334204736_2790870037713229_6217959306890848655_n.jpg?stp=c0.29.261.261a_dst-jpg_p261x260&_nc_cat=102&ccb=1-7&_nc_sid=3b2858&_nc_ohc=AdX8RjwQg0gAX86hNCj&_nc_oc=AQkesZ2r0dtxhllRoRXxBoqc51EswYpwATIKFFNGF7NltigsZxhQfcDvozjh_THLieus0ZXnRypQebPjxe5by-0w&_nc_ht=scontent.fhio2-1.fna&oh=00_AfAlND5H1386KEwCYKrNWob_uZjc7ypsYR-NZ2_wDzeGUg&oe=640ED3ED" alt="product image" />
+                                </a>
+                                <div class="px-5 pb-5">
+                                    <a href="#">
+                                        <h5 class="text-xl font-semibold tracking-tight text-gray-200">2022 Subaru wrx Premium</h5>
+                                    </a>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-3xl font-bold text-gray-300">$36,500</span>
+                                            <span class="text-sm font-bold text-gray-400">6.6K miles</span>
+                                        </div>
+                                        <span class="text-lg font-bold text-gray-400">Title: clean</span>
+                                    </div>
+
+                                </div>
+                            </div>                           
+                        </div>
+                     </div>
+
+                     <div class="grid grid-cols-3 gap-4 mb-4">
+                        <div class="flex items-center justify-center ">
+                            <div class="w-full max-w-sm border  rounded-lg shadow bg-slate-800 border-gray-700">
+                                <a href="#">
+                                    <img class="p-8 rounded-t-lg" src="https://scontent.fhio2-2.fna.fbcdn.net/v/t39.30808-6/331606020_544786691088638_1490349892355174387_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260&_nc_cat=109&ccb=1-7&_nc_sid=3b2858&_nc_ohc=-XvQPumxY2MAX_CPtq9&_nc_ht=scontent.fhio2-2.fna&oh=00_AfBPnDzEj01W-tu1FFWMK7GAiCDO2_oai0rCFn_kIKLMqA&oe=640D8D8B" alt="product image" />
+                                </a>
+                                <div class="px-5 pb-5">
+                                    <a href="#">
+                                        <h5 class="text-xl font-semibold tracking-tight text-gray-200">2017 Toyota 86</h5>
+                                    </a>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-3xl font-bold text-gray-300">$25,999</span>
+                                            <span class="text-sm font-bold text-gray-400">35K miles</span>
+                                        </div>
+                                        <span class="text-lg font-bold text-gray-400">Title: clean</span>
+                                    </div>
+
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-full max-w-sm border  rounded-lg shadow bg-slate-800 border-gray-700">
+                                <a href="#">
+                                    <img class="p-8 rounded-t-lg" src="https://scontent.fhio2-1.fna.fbcdn.net/v/t39.30808-6/334565569_129526629820420_6937982001258351900_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260&_nc_cat=111&ccb=1-7&_nc_sid=3b2858&_nc_ohc=U32mrEdb8eAAX_1QWZr&_nc_ht=scontent.fhio2-1.fna&oh=00_AfB8rDcTzoErPaCFqu18aQ3gO7rZrXT0a2JuN92JyZKHdQ&oe=640F65B0" alt="product image" />
+                                </a>
+                                <div class="px-5 pb-5">
+                                    <a href="#">
+                                        <h5 class="text-xl font-semibold tracking-tight text-gray-200">2018 Ford mustang EcoBoost Coupe 2D</h5>
+                                    </a>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-3xl font-bold text-gray-300">$21,999</span>
+                                            <span class="text-sm font-bold text-gray-400">71K miles</span>
+                                        </div>
+                                        <span class="text-lg font-bold text-gray-400">Title: salvage</span>
+                                    </div>
+
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-full max-w-sm border  rounded-lg shadow bg-slate-800 border-gray-700">
+                                <a href="#">
+                                    <img class="p-8 rounded-t-lg" src="https://scontent.fhio2-1.fna.fbcdn.net/v/t39.30808-6/329780437_1466799703846957_885222335512414946_n.jpg?stp=c43.0.260.260a_dst-jpg_p261x260&_nc_cat=103&ccb=1-7&_nc_sid=3b2858&_nc_ohc=mOKGcOO5UtQAX9NP44S&_nc_ht=scontent.fhio2-1.fna&oh=00_AfCBz2DFCVMTe3KPE_9D-ZWlJkWHXBAfwrshNUHVc5hEzQ&oe=640F1A9F" alt="product image" />
+                                </a>
+                                <div class="px-5 pb-5">
+                                    <a href="#">
+                                        <h5 class="text-xl font-semibold tracking-tight text-gray-200">2017 Mazda mazda6 Sport Sedan 4D</h5>
+                                    </a>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-3xl font-bold text-gray-300">$18,998</span>
+                                            <span class="text-sm font-bold text-gray-400">28K miles</span>
+                                        </div>
+                                        <span class="text-lg font-bold text-gray-400">Title: rebuilt</span>
+                                    </div>
+
+                                </div>
+                            </div>                           
+                        </div>
+                     </div>
+
+                 </div>
+                   
+                </div>
+                
+             </div>
+
+
+             <div id="marketplace"></div>
+    </div>
+
+    <div id="app"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    <script src="src/index.js"></script>
+  </body>
+</html>
